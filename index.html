@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông Tin Học Viên</title>
+    <style>
+        /* ---- Reset & base ---- */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
+        }
+
+        /* ---- Card ---- */
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 18px;
+            padding: 3rem 3.5rem;
+            max-width: 520px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        /* ---- Badge / avatar placeholder ---- */
+        .avatar {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            margin: 0 auto 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.8rem;
+            background: linear-gradient(90deg, #00c6ff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ---- Info table ---- */
+        .info-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            text-align: left;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 0.65rem 1rem;
+        }
+
+        .info-table th {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            white-space: nowrap;
+            width: 38%;
+        }
+
+        .info-table td {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            background: rgba(255,255,255,0.06);
+            border-radius: 8px;
+        }
+
+        /* ---- Server info strip ---- */
+        .server-info {
+            margin-top: 2rem;
+            padding: 0.85rem 1.2rem;
+            background: rgba(0, 198, 255, 0.08);
+            border: 1px solid rgba(0, 198, 255, 0.25);
+            border-radius: 10px;
+            font-size: 0.82rem;
+            color: #7dd3fc;
+            line-height: 1.7;
+        }
+
+        .server-info strong { color: #38bdf8; }
+
+        footer {
+            margin-top: 2.2rem;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar">🎓</div>
+
+        <h1>Thông Tin Học Viên</h1>
+
+        <table class="info-table">
+            <tr>
+                <th>Họ và tên</th>
+                <td>Nguyễn Văn Toàn</td>
+            </tr>
+            <tr>
+                <th>Mã lớp</th>
+                <td>SS07 – DevOps Fundamentals</td>
+            </tr>
+        </table>
+
+        <div class="server-info">
+            <strong>🌐 Nginx Reverse Proxy</strong><br />
+            Static files served from <code>/var/www/html/</code><br />
+            API requests (<code>/api/*</code>) proxied → Spring Boot :8082
+        </div>
+
+        <footer>Bài 4 &mdash; Cấu hình Reverse Proxy Nginx &bull; 2026</footer>
+    </div>
+</body>
+</html>
